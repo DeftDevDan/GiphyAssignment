@@ -1,0 +1,26 @@
+.xD {
+	display: inline-block;
+	text-align:center;
+	margin: 0px 5px 0px 5px;
+}
+
+body {
+	text-align:center;
+}
+
+#top {
+	margin: 15px;
+}
+
+button {
+	margin: 5px;
+}
+
+#search-input {
+	width: 60%;
+	font-size: 2em;
+}
+
+label {
+	line-height: 2em;
+}

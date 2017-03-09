@@ -2,7 +2,7 @@
 <html>
 <head>
 	<title>Giphy Assignment</title>
-	<link rel = "text/stylesheet" href = "assets/css/style.css">
+	<link rel = "stylesheet" href="assets/css/style.css">
 </head>
 <body>
 	<div id = "top">
@@ -13,6 +13,11 @@
 			<input type="text" id="search-input">
 			<input id="search-submit" type="submit">
 		</form>
+	</div>
+	<div id ="playPause">
+		<button onClick="playAll()">Play All</button>
+		<button onClick="stopAll()">Stop All</button>
+		<button onClick="load()" id="loadMoreBtn">Load More</button>
 	</div>
 	<div id = "images">
 	</div>
