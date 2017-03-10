@@ -1,19 +1,39 @@
-.xD {
-	display: inline-block;
-	text-align:center;
-	margin: 0px 5px 0px 5px;
-}
-
 body {
 	text-align:center;
-}
-
-#top {
-	margin: 15px;
+	background-color: #333;
+	color: #fff;
 }
 
 button {
 	margin: 5px;
+}
+
+label {
+	line-height: 32px;
+}
+
+.xD {
+	display: inline-block;
+	text-align:center;
+	margin: 5px;
+	border: 1px solid white;
+}
+
+.gifBtn {
+	background-color: #333;
+	color: #fff;
+	text-decoration:none;
+	border: 1px solid white;
+	padding: 4px 8px;
+}
+
+.gifBtn:hover {
+	background-color: #fff;
+	color: #333;
+}
+
+#top {
+	margin: 15px;
 }
 
 #search-input {
@@ -21,6 +41,32 @@ button {
 	font-size: 2em;
 }
 
-label {
-	line-height: 2em;
+#images {
+	margin-left: auto;
+	margin-right: auto;
+	width: 85%;
+}
+
+#playBtn{
+	background-color: #333;
+	color: #32CD32;
+	margin: 4px 8px;
+	border: 1px solid #32CD32;
+	font-size: 1.4em;
+}
+
+#stopBtn{
+	background-color: #333;
+	color: #FF0000;
+	margin: 4px 8px;
+	border: 1px solid #FF0000;
+	font-size: 1.4em;
+}
+
+#loadMoreBtn{
+	background-color: #333;
+	color: #1E90FF;
+	margin: 4px 8px;
+	border: 1px solid #1E90FF;
+	font-size: 1.4em;
 }

@@ -1,6 +1,6 @@
 window.onload=start;
 
-var topics = ["Tyrion Lannister", "Daenerys Targaryen", "Rick and Morty", "Doctor Who"];
+var topics = ["Tyrion Lannister", "Daenerys Targaryen", "Rick and Morty", "Doctor Who", "Mr. Robot", "Dexter", "Harambe"];
 var picNum = 0;
 var results;
 
@@ -15,24 +15,9 @@ function addButton(i) {
 	var btn = $("<button>");
 	btn.attr("data-name", i);
 	btn.text(i);
+	$(btn).addClass("gifBtn");
 	$("#top").append(btn);
 }
-
-$("#top").on("click", "button", function() {
-	picNum = 0;
-	$("#images").empty();
-	imageLoad($(this).attr("data-name"));
-});
-
-$("#search-submit").on("click", function(event) {
-	event.preventDefault();
-	picNum = 0;
-	$("#images").empty();
-	var search = $("#search-input").val().trim();
-	imageLoad(search);
-	addButton(search);
-	$("#search-input").val("");
-});
 
 function imageLoad(look) {
 	publicKey = "&api_key=dc6zaTOxFJmzC";
@@ -66,10 +51,6 @@ function load() {
 	}
 }
 
-$("#images").on("click", "img", function() {
-	imageClick(this);
-});
-
 function imageClick(x) {
 	var state = $(x).attr("data-state");
 	if(state === "still") {
@@ -94,3 +75,28 @@ function stopAll() {
 		$(this).attr("data-state", "still");
 	});
 }
+
+$("#top").on("click", "button", function() {
+	picNum = 0;
+	$("#images").empty();
+	imageLoad($(this).attr("data-name"));
+});
+
+$("#search-submit").on("click", function(event) {
+	event.preventDefault();
+	if($("#search-input").val().trim() !== "") {
+		picNum = 0;
+		$("#images").empty();
+		var search = $("#search-input").val().trim();
+		imageLoad(search);
+		if (topics.indexOf(search) === -1) {
+			addButton(search);
+		}
+		topics.push(search);
+		$("#search-input").val("");
+	}
+});
+
+$("#images").on("click", "img", function() {
+	imageClick(this);
+});
