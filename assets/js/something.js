@@ -21,7 +21,7 @@ function addButton(i) {
 
 function imageLoad(look) {
 	publicKey = "&api_key=dc6zaTOxFJmzC";
-	queryURL = "http://api.giphy.com/v1/gifs/search?q=" + look + publicKey;
+	queryURL = "https://api.giphy.com/v1/gifs/search?q=" + look + publicKey;
 
 	$.ajax({
 		url:queryURL,
